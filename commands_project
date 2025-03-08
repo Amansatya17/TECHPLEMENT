@@ -1,0 +1,34 @@
+Linux commands used in the project:
+
+sudo apt update
+sudo apt install apache2
+sudo apt install mysql-server
+sudo apt install php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc (php and modules)
+wget https://wordpress.org/latest.tar.gz && tar -xzvf latest.tar.gz (wp extraction)
+sudo mv wordpress/* /var/www/html/
+ls
+sudo mysql_secure_installation
+sudo mysql -u root -p
+
+MySQL commands reference from website
+ 
+CREATE DATABASE wordpress;
+CREATE USER 'wordpressuser'@'%' IDENTIFIED BY 'Mysql@12345';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'%';
+FLUSH PRIVILEGES;
+EXIT;
+
+sudo chown -R www-data:www-data /var/www/html/
+cd /var/www/html/
+sudo mv wp-config-sample.php wp-config.php
+sudo nano wp-config.php
+sudo systemctl restart apache2
+wp-config.php (config with db)
+
+monolithic
+http://3.85.193.181
+
+microservice
+http://3.90.137.204
+
+few commands are taken reference from websites.
